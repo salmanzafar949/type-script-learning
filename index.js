@@ -25,4 +25,10 @@ function addNumbers(n1, n2) {
     return n1 + n2;
 }
 console.log("Sum of Two numbers is " + addNumbers(1, 2));
+// Default Arguments in functions
+function areaOfEclipse(r1, r2) {
+    if (r2 === void 0) { r2 = r1; }
+    return Math.PI * r1 * r2;
+}
+console.log("area of Eclipse " + areaOfEclipse(2));
 // alert('hello world');

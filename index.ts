@@ -39,4 +39,10 @@ function addNumbers(n1, n2) : number {
 
 console.log(`Sum of Two numbers is ${addNumbers(1,2)}`)
 
+// Default Arguments in functions
+function areaOfEclipse(r1:number, r2:number=r1){
+    return Math.PI * r1 * r2;
+}
+
+console.log(`area of Eclipse ${areaOfEclipse(2)}`)
 // alert('hello world');
