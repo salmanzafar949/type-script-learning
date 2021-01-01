@@ -57,4 +57,26 @@ function areaOfSquare(side:number, isInteger?:boolean) :number {
 
 console.log(`Area of Square is: ${areaOfSquare(2.125)}`);
 
+// Function overloading
+
+function getResult(num:number);
+function getResult(num:number, num1:number);
+function getResult(num:number, num1:number, num2:number, num3:number);
+function getResult(num:number, num1?:number, num2?:number, num3?:number){
+    if (num1 == undefined && num2 == undefined && num3 == undefined){
+        return num;
+    }
+    else if (num2 == undefined && num3 == undefined){
+        return num + num;
+    }
+
+    return -1;
+}
+
+console.log(`Function overloading ${getResult(1)}`);
+console.log(`Function overloading ${getResult(1, 2)}`);
+// will give error since we havent defined function overloading ith three arguments
+// console.log(`Function overloading ${getResult(1,2,3)}`);
+console.log(`Function overloading ${getResult(1,2,3, 4)}`);
+
 // alert('hello world');

@@ -39,4 +39,18 @@ function areaOfSquare(side, isInteger) {
     return side * side;
 }
 console.log("Area of Square is: " + areaOfSquare(2.125));
+function getResult(num, num1, num2, num3) {
+    if (num1 == undefined && num2 == undefined && num3 == undefined) {
+        return num;
+    }
+    else if (num2 == undefined && num3 == undefined) {
+        return num + num;
+    }
+    return -1;
+}
+console.log("Function overloading " + getResult(1));
+console.log("Function overloading " + getResult(1, 2));
+// will give error since we havent defined function overloading ith three arguments
+// console.log(`Function overloading ${getResult(1,2,3)}`);
+console.log("Function overloading " + getResult(1, 2, 3, 4));
 // alert('hello world');
