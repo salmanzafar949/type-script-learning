@@ -10,6 +10,7 @@ var arr = [1, 2, 3];
 // array if any thing e.g 1, 3, "a"
 var arr1 = [1, 2, 3, "aa"];
 // Enums
+// can only be numbers
 var myConstants;
 (function (myConstants) {
     myConstants[myConstants["pi"] = 3.14] = "pi";
@@ -19,4 +20,9 @@ var myConstants;
 })(myConstants || (myConstants = {}));
 var radius = 10;
 console.log("Finding area of Circumference " + 2 * myConstants.pi * radius);
+// Functions
+function addNumbers(n1, n2) {
+    return n1 + n2;
+}
+console.log("Sum of Two numbers is " + addNumbers(1, 2));
 // alert('hello world');

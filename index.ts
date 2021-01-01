@@ -29,4 +29,14 @@ var radius:number = 10;
 
 console.log(`Finding area of Circumference ${2 * myConstants.pi * radius}`)
 
+
+// Functions
+
+function addNumbers(n1, n2) : number {
+
+    return n1 + n2;
+}
+
+console.log(`Sum of Two numbers is ${addNumbers(1,2)}`)
+
 // alert('hello world');
