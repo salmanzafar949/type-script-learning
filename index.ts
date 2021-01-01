@@ -45,4 +45,16 @@ function areaOfEclipse(r1:number, r2:number=r1){
 }
 
 console.log(`area of Eclipse ${areaOfEclipse(2)}`)
+
+// Function with optional arguments
+function areaOfSquare(side:number, isInteger?:boolean) :number {
+    if (isInteger){
+        return Math.floor(side * side)
+    }
+
+    return side * side;
+}
+
+console.log(`Area of Square is: ${areaOfSquare(2.125)}`);
+
 // alert('hello world');
