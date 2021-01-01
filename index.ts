@@ -16,6 +16,7 @@ var arr:number[] = [1,2,3];
 var arr1:any[] = [1,2,3, "aa"];
 
 // Enums
+// can only be numbers
 
 enum myConstants {
     pi = 3.14,
