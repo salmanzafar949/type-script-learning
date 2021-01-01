@@ -15,4 +15,17 @@ var arr:number[] = [1,2,3];
 // array if any thing e.g 1, 3, "a"
 var arr1:any[] = [1,2,3, "aa"];
 
+// Enums
+
+enum myConstants {
+    pi = 3.14,
+    e = 2,
+    log = 0.3,
+    log1 = 0.7,
+}
+
+var radius:number = 10;
+
+console.log(`Finding area of Circumference ${2 * myConstants.pi * radius}`)
+
 // alert('hello world');
