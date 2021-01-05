@@ -50,7 +50,12 @@ function getResult(num, num1, num2, num3) {
 }
 console.log("Function overloading " + getResult(1));
 console.log("Function overloading " + getResult(1, 2));
-// will give error since we havent defined function overloading ith three arguments
+// will give error since we haven't defined function overloading ith three arguments
 // console.log(`Function overloading ${getResult(1,2,3)}`);
 console.log("Function overloading " + getResult(1, 2, 3, 4));
+function operate(x) {
+    return x.size * x.size;
+}
+var calc = operate({ shape: "square", size: 5 });
+console.log("operate is " + calc);
 // alert('hello world');

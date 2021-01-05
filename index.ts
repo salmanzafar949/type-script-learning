@@ -75,8 +75,25 @@ function getResult(num:number, num1?:number, num2?:number, num3?:number){
 
 console.log(`Function overloading ${getResult(1)}`);
 console.log(`Function overloading ${getResult(1, 2)}`);
-// will give error since we havent defined function overloading ith three arguments
+// will give error since we haven't defined function overloading ith three arguments
 // console.log(`Function overloading ${getResult(1,2,3)}`);
 console.log(`Function overloading ${getResult(1,2,3, 4)}`);
+
+
+// interface in ts
+
+interface operateInterface {
+    shape:string,
+    size:number
+}
+
+function operate(x:operateInterface) {
+
+    return x.size * x.size
+}
+
+var calc = operate({shape : "square", size: 5})
+
+console.log(`operate is ${calc}`)
 
 // alert('hello world');
