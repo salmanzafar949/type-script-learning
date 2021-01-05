@@ -58,4 +58,17 @@ function operate(x) {
 }
 var calc = operate({ shape: "square", size: 5 });
 console.log("operate is " + calc);
+function createPlayer() {
+    return {
+        run: function () { },
+        addLives: function (n) { },
+        score: function () {
+            return -1;
+        }
+    };
+}
+var player1 = createPlayer();
+player1.addLives(1);
+player1.run();
+console.log("Player1 " + player1.score());
 // alert('hello world');
