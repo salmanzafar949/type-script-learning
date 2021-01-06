@@ -88,4 +88,21 @@ myWebsite.url = "https://salman.com";
 myWebsite.address = "https://salman.com";
 myWebsite.mobile_no = 12345678;
 console.log("mobile " + myWebsite.getMobile());
+// getter and Setters
+var Rectangle = /** @class */ (function () {
+    function Rectangle(l, l1) {
+        this.l = l;
+        this.l1 = l1;
+    }
+    Object.defineProperty(Rectangle.prototype, "area", {
+        get: function () {
+            return this.l1 * this.l1;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return Rectangle;
+}());
+var rect = new Rectangle(1, 2);
+console.log("Area is " + rect.area);
 // alert('hello world');

@@ -146,4 +146,21 @@ myWebsite.mobile_no = 12345678
 
 console.log(`mobile ${myWebsite.getMobile()}`)
 
+// getter and Setters
+class Rectangle {
+    l:number;
+    l1:number;
+
+    constructor(l:number, l1:number) {
+        this.l = l;
+        this.l1 = l1;
+    }
+
+    get area():number{
+        return this.l1 * this.l1;
+    }
+}
+var rect = new Rectangle(1, 2);
+
+console.log(`Area is ${rect.area}`)
 // alert('hello world');
