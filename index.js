@@ -127,4 +127,21 @@ var rect = new Rectangle();
 rect.perimeter = 2;
 rect.oneSide = 2;
 console.log("Area is " + rect.area);
+// Fat Arrow Functions (Lambda Functions)
+var Car = /** @class */ (function () {
+    function Car() {
+        this.gasAmount = 0;
+        this.carObj = document.getElementById('car');
+    }
+    Car.prototype.run = function () {
+        var _this = this;
+        setInterval(function () {
+            _this.gasAmount++;
+            _this.carObj.innerText = String(_this.gasAmount);
+        }, 500);
+    };
+    return Car;
+}());
+var myCar = new Car();
+myCar.run();
 // alert('hello world');

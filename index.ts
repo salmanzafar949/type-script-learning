@@ -180,4 +180,29 @@ rect.perimeter = 2;
 rect.oneSide = 2;
 
 console.log(`Area is ${rect.area}`)
+
+// Fat Arrow Functions (Lambda Functions)
+
+class Car{
+    gasAmount:number;
+    carObj:HTMLElement;
+
+    constructor() {
+
+        this.gasAmount = 0;
+        this.carObj = document.getElementById('car')
+    }
+
+    run () :void{
+        setInterval(() => {
+            this.gasAmount++;
+            this.carObj.innerText = String(this.gasAmount)
+        },500)
+    }
+}
+
+
+var myCar = new Car();
+myCar.run();
+
 // alert('hello world');
