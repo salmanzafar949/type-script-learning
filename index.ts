@@ -148,19 +148,36 @@ console.log(`mobile ${myWebsite.getMobile()}`)
 
 // getter and Setters
 class Rectangle {
-    l:number;
+
+    _perimeter:number;
+    _sideOne:number;
+    _sideTwo:number;
+
+   /* l:number;
     l1:number;
 
     constructor(l:number, l1:number) {
         this.l = l;
         this.l1 = l1;
-    }
+    }*/
 
     get area():number{
-        return this.l1 * this.l1;
+        return this._sideOne * this._sideTwo;
+    }
+
+    set perimeter(length:number){
+        this._perimeter = length;
+    }
+
+    set oneSide(side:number){
+        this._sideOne = side;
+
+        this._sideTwo = (this._perimeter - 2* this._sideOne)/2
     }
 }
-var rect = new Rectangle(1, 2);
+var rect = new Rectangle();
+rect.perimeter = 2;
+rect.oneSide = 2;
 
 console.log(`Area is ${rect.area}`)
 // alert('hello world');

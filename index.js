@@ -90,19 +90,41 @@ myWebsite.mobile_no = 12345678;
 console.log("mobile " + myWebsite.getMobile());
 // getter and Setters
 var Rectangle = /** @class */ (function () {
-    function Rectangle(l, l1) {
-        this.l = l;
-        this.l1 = l1;
+    function Rectangle() {
     }
     Object.defineProperty(Rectangle.prototype, "area", {
+        /* l:number;
+         l1:number;
+     
+         constructor(l:number, l1:number) {
+             this.l = l;
+             this.l1 = l1;
+         }*/
         get: function () {
-            return this.l1 * this.l1;
+            return this._sideOne * this._sideTwo;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Rectangle.prototype, "perimeter", {
+        set: function (length) {
+            this._perimeter = length;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Object.defineProperty(Rectangle.prototype, "oneSide", {
+        set: function (side) {
+            this._sideOne = side;
+            this._sideTwo = (this._perimeter - 2 * this._sideOne) / 2;
         },
         enumerable: false,
         configurable: true
     });
     return Rectangle;
 }());
-var rect = new Rectangle(1, 2);
+var rect = new Rectangle();
+rect.perimeter = 2;
+rect.oneSide = 2;
 console.log("Area is " + rect.area);
 // alert('hello world');
