@@ -118,4 +118,19 @@ player1.addLives(1);
 player1.run();
 
 console.log(`Player1 ${player1.score()}`)
+
+// Classes
+
+class Website{
+    url:string;
+    address: string;
+    mobile_no: number;
+}
+
+var myWebsite = new Website();
+
+myWebsite.url = "https://salman.com"
+myWebsite.address = "https://salman.com"
+myWebsite.mobile_no = 12345678
+
 // alert('hello world');

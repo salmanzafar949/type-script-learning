@@ -71,4 +71,14 @@ var player1 = createPlayer();
 player1.addLives(1);
 player1.run();
 console.log("Player1 " + player1.score());
+// Classes
+var Website = /** @class */ (function () {
+    function Website() {
+    }
+    return Website;
+}());
+var myWebsite = new Website();
+myWebsite.url = "https://salman.com";
+myWebsite.address = "https://salman.com";
+myWebsite.mobile_no = 12345678;
 // alert('hello world');
