@@ -125,9 +125,16 @@ class Website{
     url:string;
     address: string;
     mobile_no: number;
+
+    constructor(url:string, address:string, mobile_no:number)
+    {
+        this.url = url
+        this.address = address
+        this.mobile_no = mobile_no
+    }
 }
 
-var myWebsite = new Website();
+var myWebsite = new Website("https://salman.com", "https://salman.com", 12345678);
 
 myWebsite.url = "https://salman.com"
 myWebsite.address = "https://salman.com"

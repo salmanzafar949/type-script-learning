@@ -73,11 +73,14 @@ player1.run();
 console.log("Player1 " + player1.score());
 // Classes
 var Website = /** @class */ (function () {
-    function Website() {
+    function Website(url, address, mobile_no) {
+        this.url = url;
+        this.address = address;
+        this.mobile_no = mobile_no;
     }
     return Website;
 }());
-var myWebsite = new Website();
+var myWebsite = new Website("https://salman.com", "https://salman.com", 12345678);
 myWebsite.url = "https://salman.com";
 myWebsite.address = "https://salman.com";
 myWebsite.mobile_no = 12345678;
