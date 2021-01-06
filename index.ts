@@ -132,6 +132,10 @@ class Website{
         this.address = address
         this.mobile_no = mobile_no
     }
+
+    getMobile () : number {
+        return this.mobile_no;
+    }
 }
 
 var myWebsite = new Website("https://salman.com", "https://salman.com", 12345678);
@@ -139,5 +143,7 @@ var myWebsite = new Website("https://salman.com", "https://salman.com", 12345678
 myWebsite.url = "https://salman.com"
 myWebsite.address = "https://salman.com"
 myWebsite.mobile_no = 12345678
+
+console.log(`mobile ${myWebsite.getMobile()}`)
 
 // alert('hello world');
